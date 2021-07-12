@@ -1,0 +1,40 @@
+$darkBlue: hsl(209, 23%, 22%);
+$veryDarkBlueText: hsl(207, 26%, 17%);
+$veryDarkBlueInput: hsl(200, 15%, 8%);
+$darkGrayInput: hsl(0, 0%, 52%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: #000000;
+
+@mixin theme($theme: $white, $text: $black) {
+  background-color: $theme;
+  box-shadow: 0px 0px 1px $theme;
+  color: $text;
+}
+
+@mixin background($color: $darkBlue) {
+  background-color: $color;
+}
+
+@mixin text($color: $darkGrayInput) {
+  color: $color;
+}
+
+.theme-dark {
+  @include theme($theme: $darkBlue, $text: $white);
+}
+
+.theme-white {
+    @include theme($theme : $white, $text : $veryDarkBlueText )
+}
+
+.bg-veryDarkBlue {
+  @include background($color: $veryDarkBlueText)
+}
+
+.bg-darkBlue {
+  @include background($color : $darkBlue)
+}
+.text-darkGrayInput {
+  @include text($color: $darkGrayInput)
+}
