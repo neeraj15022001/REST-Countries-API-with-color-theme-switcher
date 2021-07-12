@@ -11,7 +11,11 @@ function SearchBar() {
         width="25px"
         className="mr-2"
       />
-      <input type="text" placeholder="Search for a country..." className="bg-transparent outline-none text-white" />
+      <input
+        type="text"
+        placeholder="Search for a country..."
+        className="bg-transparent outline-none text-white"
+      />
     </div>
   );
 }

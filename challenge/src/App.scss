@@ -25,16 +25,16 @@ $black: #000000;
 }
 
 .theme-white {
-    @include theme($theme : $white, $text : $veryDarkBlueText )
+  @include theme($theme: $white, $text: $veryDarkBlueText);
 }
 
 .bg-veryDarkBlue {
-  @include background($color: $veryDarkBlueText)
+  @include background($color: $veryDarkBlueText);
 }
 
 .bg-darkBlue {
-  @include background($color : $darkBlue)
+  @include background($color: $darkBlue);
 }
 .text-darkGrayInput {
-  @include text($color: $darkGrayInput)
+  @include text($color: $darkGrayInput);
 }
