@@ -7,7 +7,8 @@ function Card({ countryName, population, region, capital, image }) {
     <div
       className={`${
         darkMode ? "bg-darkBlue text-white" : "bg-white text-black"
-      } w-60 m-auto rounded-md cursor-pointer transition-transform transform hover:scale-110`} onClick={() => window.location.assign(`/details/${countryName}`)}
+      } w-60 m-auto rounded-md cursor-pointer transition-transform transform hover:scale-110`}
+      onClick={() => window.location.assign(`/details/${countryName}`)}
     >
       <div
         style={{ backgroundImage: `url(${image})` }}
