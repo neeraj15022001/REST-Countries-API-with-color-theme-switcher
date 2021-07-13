@@ -24,7 +24,6 @@ $black: #000000;
   border-color: $color;
 }
 
-
 .theme-dark {
   @include theme($theme: $darkBlue, $text: $white);
 }
@@ -48,8 +47,8 @@ $black: #000000;
 }
 
 .border-darkBlue {
-  @include border($color: $darkBlue)
+  @include border($color: $darkBlue);
 }
 .border-light {
-  @include border($color: $veryLightGray)
+  @include border($color: $veryLightGray);
 }

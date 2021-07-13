@@ -15,12 +15,14 @@ function Details() {
       </div>
       <div className="flex items-center justify-center">
         <div
-          className={`w-1/2 bg-center bg-cover h-96 border-8 mt-10 mr-10 mb-10 ${darkMode? "border-darkBlue":"border-light"}`}
+          className={`w-1/2 bg-center bg-cover h-96 border-8 mt-10 mr-10 mb-10 ${
+            darkMode ? "border-darkBlue" : "border-light"
+          }`}
           style={{
             backgroundImage: "url(https://restcountries.eu/data/bel.svg)",
           }}
         ></div>
-        <div className={`w-1/2 ${darkMode? "text-white" : "text-black"}`}>
+        <div className={`w-1/2 ${darkMode ? "text-white" : "text-black"}`}>
           <p className="mb-5 font-bold text-3xl">Belgium</p>
           <div className="flex items-start justify-between mb-10">
             <div>
@@ -55,9 +57,27 @@ function Details() {
           </div>
           <div className="flex items-center justify-start">
             <span className="capitalize mr-3">border countries: </span>
-            <div className={`px-8 py-2 capitalize ${darkMode ? "bg-darkBlue" : "bg-white"} shadow-lg mr-3`}>france</div>
-            <div className={`px-8 py-2 capitalize ${darkMode ? "bg-darkBlue" : "bg-white"} shadow-lg mr-3`}>germany</div>
-            <div className={`px-8 py-2 capitalize ${darkMode ? "bg-darkBlue" : "bg-white"} shadow-lg`}>netherlands</div>
+            <div
+              className={`px-8 py-2 capitalize ${
+                darkMode ? "bg-darkBlue" : "bg-white"
+              } shadow-lg mr-3`}
+            >
+              france
+            </div>
+            <div
+              className={`px-8 py-2 capitalize ${
+                darkMode ? "bg-darkBlue" : "bg-white"
+              } shadow-lg mr-3`}
+            >
+              germany
+            </div>
+            <div
+              className={`px-8 py-2 capitalize ${
+                darkMode ? "bg-darkBlue" : "bg-white"
+              } shadow-lg`}
+            >
+              netherlands
+            </div>
           </div>
         </div>
       </div>

@@ -1,3 +1,3 @@
-import {DarkModeContext} from "../../Context/DarkModeContext.js"
+import { DarkModeContext } from "../../Context/DarkModeContext.js";
 
-export {DarkModeContext}
+export { DarkModeContext };
