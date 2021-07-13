@@ -35,6 +35,9 @@ $black: #000000;
 .bg-darkBlue {
   @include background($color: $darkBlue);
 }
+.bg-light {
+  @include background($color : $veryLightGray)
+}
 .text-darkGrayInput {
   @include text($color: $darkGrayInput);
 }

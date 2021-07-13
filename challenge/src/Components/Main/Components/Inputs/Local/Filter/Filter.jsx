@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
+import {DarkModeContext} from "../Services/Context.js"
 
 function Filter() {
+  const [darkMode, setDarkMode] = useContext(DarkModeContext)
   return (
-    <div className="bg-darkBlue px-6 py-3 rounded-sm">
+    <div className={`${darkMode?"bg-darkBlue text-white" : "bg-white text-black"} px-6 py-3 rounded-md mr-auto sm:m-0`}>
       <select
         name="countries"
-        className="bg-transparent outline-none text-white"
+        className="bg-transparent outline-none"
         defaultValue="none"
       >
         <option value="none" disabled hidden>
