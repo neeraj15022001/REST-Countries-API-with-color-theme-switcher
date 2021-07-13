@@ -20,6 +20,11 @@ $black: #000000;
   color: $color;
 }
 
+@mixin border($color: $darkBlue) {
+  border-color: $color;
+}
+
+
 .theme-dark {
   @include theme($theme: $darkBlue, $text: $white);
 }
@@ -40,4 +45,11 @@ $black: #000000;
 }
 .text-darkGrayInput {
   @include text($color: $darkGrayInput);
+}
+
+.border-darkBlue {
+  @include border($color: $darkBlue)
+}
+.border-light {
+  @include border($color: $veryLightGray)
 }
