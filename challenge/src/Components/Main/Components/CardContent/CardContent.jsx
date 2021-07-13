@@ -25,7 +25,7 @@ function CardContent() {
   return (
     <div className="py-10 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-20 w-full h-full">
       <p
-        className={`${darkMode ? "text-white" : "text-black"} ${
+        className={`${darkMode ? "text-white" : "text-black"} animate-pulse ${
           isLoading ? "block" : "hidden"
         }`}
       >

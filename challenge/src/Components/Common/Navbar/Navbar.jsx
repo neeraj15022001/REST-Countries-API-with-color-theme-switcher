@@ -10,7 +10,7 @@ function Navbar() {
   };
   return (
     <div
-      className={`flex items-center justify-between px-20 py-4 ${
+      className={`flex items-center justify-between px-20 py-4 z-10 ${
         darkMode ? "theme-dark" : "theme-white"
       } fixed top-0 left-0 right-0`}
       style={{ boxShadow: darkMode ? "" : "0px 1px 5px 0px rgba(0,0,0,0.1" }}

@@ -16,8 +16,7 @@ function App() {
             <Route exact path="/">
               <Main />
             </Route>
-            <Route path="/details">
-              <Details />
+            <Route path="/details/:country" render={props => <Details countryName={props.match.params.country} />}>
             </Route>
           </Switch>
         </Router>
