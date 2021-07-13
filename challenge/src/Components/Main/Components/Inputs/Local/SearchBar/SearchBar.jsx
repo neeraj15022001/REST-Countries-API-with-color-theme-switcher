@@ -1,11 +1,15 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { SearchOutline } from "react-ionicons";
-import {DarkModeContext} from "../Services/Context.js"
+import { DarkModeContext } from "../Services/Context.js";
 
 function SearchBar() {
-  const [darkMode, setDarkMode] = useContext(DarkModeContext)
+  const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <div className={`flex items-center justify-center ${darkMode ? "bg-darkBlue text-white" : "bg-white text-black"} px-5 py-3 rounded-md w-full sm:w-auto mb-5 sm:m-0`}>
+    <div
+      className={`flex items-center justify-center ${
+        darkMode ? "bg-darkBlue text-white" : "bg-white text-black"
+      } px-5 py-3 rounded-md w-full sm:w-auto mb-5 sm:m-0`}
+    >
       <SearchOutline
         color={darkMode ? "#fff" : "#000"}
         title={"Search"}
@@ -16,7 +20,9 @@ function SearchBar() {
       <input
         type="text"
         placeholder="Search for a country..."
-        className={`bg-transparent outline-none ${darkMode ? "text-white" : "text-black"}`}
+        className={`bg-transparent outline-none ${
+          darkMode ? "text-white" : "text-black"
+        }`}
       />
     </div>
   );
