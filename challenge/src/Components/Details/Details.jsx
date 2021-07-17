@@ -47,11 +47,11 @@ function Details({ countryName }) {
             darkMode ? "border-darkBlue" : "border-light"
           }`}
           style={{
-            backgroundImage: "url(https://restcountries.eu/data/bel.svg)",
+            backgroundImage: `url(${countryData.flag})`,
           }}
         ></div>
         <div className={`w-1/2 ${darkMode ? "text-white" : "text-black"}`}>
-          <p className="mb-5 font-bold text-3xl">Belgium</p>
+          <p className="mb-5 font-bold text-3xl">{countryData && Object.keys(countryData).length === 0 ? "" : countryData.name}</p>
           <div className="flex items-start justify-between mb-10">
             <div>
               <p className="capitalize mb-3">
@@ -78,15 +78,15 @@ function Details({ countryName }) {
             <div>
               <p className="capitalize mb-3">
                 <span className="capitalize">top level domain: </span>
-                {countryData && countryData.topLevelDomain[0]}
+                <span>{countryData && Object.keys(countryData).length === 0 ? "" : countryData.timezones[0]}</span>
               </p>
               <p className="capitalize mb-3">
                 <span className="capitalize">currencies: </span>
-                {countryData && countryData.currencies[0].code}
+                <span>{countryData && Object.keys(countryData).length === 0 ? "" : countryData.currencies[0].code}</span>
               </p>
               <p className="capitalize">
                 <span className="capitalize">languages: </span>
-                {countryData &&
+                {countryData && Object.keys(countryData).length === 0 ? "" :
                   countryData.languages.map((item) => item.name[0])}
               </p>
             </div>
@@ -98,21 +98,7 @@ function Details({ countryName }) {
                 darkMode ? "bg-darkBlue" : "bg-white"
               } shadow-lg mr-3`}
             >
-              france
-            </div>
-            <div
-              className={`px-8 py-2 capitalize ${
-                darkMode ? "bg-darkBlue" : "bg-white"
-              } shadow-lg mr-3`}
-            >
-              germany
-            </div>
-            <div
-              className={`px-8 py-2 capitalize ${
-                darkMode ? "bg-darkBlue" : "bg-white"
-              } shadow-lg`}
-            >
-              netherlands
+              {countryData && Object.keys(countryData).length === 0 ? "" : countryData.borders[0]}
             </div>
           </div>
         </div>
