@@ -51,7 +51,11 @@ function Details({ countryName }) {
           }}
         ></div>
         <div className={`w-1/2 ${darkMode ? "text-white" : "text-black"}`}>
-          <p className="mb-5 font-bold text-3xl">{countryData && Object.keys(countryData).length === 0 ? "" : countryData.name}</p>
+          <p className="mb-5 font-bold text-3xl">
+            {countryData && Object.keys(countryData).length === 0
+              ? ""
+              : countryData.name}
+          </p>
           <div className="flex items-start justify-between mb-10">
             <div>
               <p className="capitalize mb-3">
@@ -78,16 +82,25 @@ function Details({ countryName }) {
             <div>
               <p className="capitalize mb-3">
                 <span className="capitalize">top level domain: </span>
-                <span>{countryData && Object.keys(countryData).length === 0 ? "" : countryData.timezones[0]}</span>
+                <span>
+                  {countryData && Object.keys(countryData).length === 0
+                    ? ""
+                    : countryData.timezones[0]}
+                </span>
               </p>
               <p className="capitalize mb-3">
                 <span className="capitalize">currencies: </span>
-                <span>{countryData && Object.keys(countryData).length === 0 ? "" : countryData.currencies[0].code}</span>
+                <span>
+                  {countryData && Object.keys(countryData).length === 0
+                    ? ""
+                    : countryData.currencies[0].code}
+                </span>
               </p>
               <p className="capitalize">
                 <span className="capitalize">languages: </span>
-                {countryData && Object.keys(countryData).length === 0 ? "" :
-                  countryData.languages.map((item) => item.name[0])}
+                {countryData && Object.keys(countryData).length === 0
+                  ? ""
+                  : countryData.languages.map((item) => item.name[0])}
               </p>
             </div>
           </div>
@@ -98,7 +111,9 @@ function Details({ countryName }) {
                 darkMode ? "bg-darkBlue" : "bg-white"
               } shadow-lg mr-3`}
             >
-              {countryData && Object.keys(countryData).length === 0 ? "" : countryData.borders[0]}
+              {countryData && Object.keys(countryData).length === 0
+                ? ""
+                : countryData.borders[0]}
             </div>
           </div>
         </div>
