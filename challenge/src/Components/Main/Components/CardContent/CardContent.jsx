@@ -12,7 +12,7 @@ function CardContent() {
   useEffect(() => {
     let mounted = true;
     getCountries().then((countries) => {
-      console.log(countries);
+      // console.log(countries);
       if (mounted) {
         setcountries({ countryData: countries, isLoading: false });
       }
