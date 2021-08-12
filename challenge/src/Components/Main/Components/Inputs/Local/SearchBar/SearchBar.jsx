@@ -3,8 +3,8 @@ import { SearchOutline } from "react-ionicons";
 import { DarkModeContext } from "../Services/Context.js";
 
 function SearchBar() {
-  const [inputValue,setInput] = useState('');
-  console.log(inputValue)
+  const [inputValue, setInput] = useState("");
+  console.log(inputValue);
   const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
     <div
@@ -23,7 +23,7 @@ function SearchBar() {
         type="text"
         placeholder="Search for a country..."
         value={inputValue}
-        onChange={e => setInput(e.target.value)}
+        onChange={(e) => setInput(e.target.value)}
         className={`bg-transparent outline-none ${
           darkMode ? "text-white" : "text-black"
         }`}

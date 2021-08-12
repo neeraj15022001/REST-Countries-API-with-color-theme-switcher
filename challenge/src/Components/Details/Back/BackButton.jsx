@@ -5,7 +5,10 @@ import { DarkModeContext } from "../Services/Context.js";
 function BackButton() {
   const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <div onClick={() => window.location.assign("/")} style={{cursor:'pointer'}}>
+    <div
+      onClick={() => window.location.assign("/")}
+      style={{ cursor: "pointer" }}
+    >
       <div
         className={`flex items-center justify-between ${
           darkMode ? "bg-darkBlue text-white" : "bg-white text-black"
