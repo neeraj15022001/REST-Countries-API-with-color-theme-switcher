@@ -3,6 +3,7 @@ import { DarkModeContext } from "./Services/Context.js";
 import BackButton from "./Back/BackButton";
 
 function Details({ countryName }) {
+  {console.log("rendering Details Page")}
   const [darkMode, setdarkMode] = useContext(DarkModeContext);
   const [countryData, setcountryData] = useState({});
   // const arrayToString = (array) => {
