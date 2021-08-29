@@ -6,7 +6,7 @@ import { DarkModeContext } from "../Services/Context.js";
 function BackButton() {
   const [darkMode, setDarkMode] = useContext(DarkModeContext);
   return (
-    <Link to={{pathname: "/", state: {darkMode: darkMode}}}>
+    <Link to={{ pathname: "/", state: { darkMode: darkMode } }}>
       <div style={{ cursor: "pointer" }}>
         <div
           className={`flex items-center justify-between ${
